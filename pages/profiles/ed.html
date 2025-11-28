@@ -1,42 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ed Turner | BEFTA</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dr Ed Turner | BEFTA</title>
 
-    <!-- Correct path for CSS -->
+    <!-- Global Stylesheet -->
     <link rel="stylesheet" href="../../layout/styles.css">
 
-    <!-- Profile layout styling -->
+    <!-- Modern Profile Styling -->
     <style>
-        .profile-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 40px;
-            align-items: flex-start;
+        .profile-header {
+            text-align: center;
+            padding: 40px 20px 10px;
+        }
+
+        .profile-header h1 {
+            font-size: 2.4rem;
+            margin-bottom: 10px;
+        }
+
+        .profile-wrapper {
+            max-width: 1100px;
             margin: 40px auto;
-            max-width: 1000px;
+            padding: 0 20px;
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+            align-items: flex-start;
         }
+
         .profile-photo {
-            width: 280px;
-            border-radius: 10px;
-            box-shadow: 0px 2px 8px rgba(0,0,0,0.2);
+            flex: 0 0 320px;
+            max-width: 320px;
         }
-        .profile-text {
+
+        .profile-photo img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+        }
+
+        .profile-content {
             flex: 1;
-            min-width: 260px;
+            min-width: 280px;
+            background: #ffffff;
+            padding: 25px 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.12);
         }
-        .profile-text h1, .profile-text h2 {
+
+        .profile-content h2 {
             margin-top: 0;
+            font-size: 1.6rem;
         }
-        @media (max-width: 700px) {
-            .profile-container {
+
+        .back-link {
+            margin-top: 20px;
+            display: inline-block;
+            background: #006699;
+            color: #fff;
+            padding: 10px 18px;
+            border-radius: 6px;
+            text-decoration: none;
+        }
+        .back-link:hover {
+            background: #004c70;
+        }
+
+        @media (max-width: 760px) {
+            .profile-wrapper {
                 flex-direction: column;
+                align-items: center;
                 text-align: center;
             }
-            .profile-photo {
-                margin: 0 auto;
+            .profile-content {
+                text-align: left;
             }
         }
     </style>
@@ -44,45 +83,40 @@
 
 <body>
 
-<header>
+<!-- PAGE HEADER -->
+<div class="profile-header">
     <h1>Dr Ed Turner – Senior Researcher</h1>
-</header>
+</div>
 
-<main class="content">
+<!-- MAIN PROFILE SECTION -->
+<div class="profile-wrapper">
 
-    <div class="profile-container">
-        
-        <!-- LEFT — Photo -->
-        <img class="profile-photo" src="../../images/team/Ed_Turner.jpg" alt="Ed Turner's Profile Photo">
-
-        <!-- RIGHT — Text -->
-        <div class="profile-text">
-            <h2>About Ed</h2>
-            <p>
-                Ed has over 10 years of experience in biodiversity conservation and sustainable research. 
-                He contributes to multiple BEFTA research programmes and provides senior oversight on ecological field studies.
-            </p>
-
-            <p><a href="../team.html">← Back to Team</a></p>
-        </div>
+    <!-- PHOTO -->
+    <div class="profile-photo">
+        <img src="../../images/team/Ed_Turner.jpg" alt="Ed Turner">
     </div>
 
-</main>
+    <!-- BIO TEXT -->
+    <div class="profile-content">
+        <h2>About Ed</h2>
+
+        <p>
+            Ed has over 10 years of experience in biodiversity conservation and sustainable land-use
+            research. He leads multiple BEFTA research programmes and provides senior oversight on ecological
+            field studies across Indonesia, supporting evidence-based land management policy.
+        </p>
+
+        <a class="back-link" href="../team.html">← Back to Team</a>
+    </div>
+
+</div>
 
 <!-- FOOTER -->
 <div class="wrapper row4">
-    <footer id="footer" class="hoc clear"> 
-
+    <footer id="footer" class="hoc clear">
         <div class="one_third first">
             <h6 class="heading">Keep up to date with our team</h6>
-            <p>We are constantly uploading stories and news about our research. Follow us for more updates.</p>
-            <ul class="faico clear">
-                <li><a class="faicon-facebook" href="#"><i class="fab fa-facebook"></i></a></li>
-                <li><a class="faicon-google-plus" href="#"><i class="fab fa-google-plus-g"></i></a></li>
-                <li><a class="faicon-linkedin" href="#"><i class="fab fa-linkedin"></i></a></li>
-                <li><a class="faicon-twitter" href="#"><i class="fab fa-twitter"></i></a></li>
-                <li><a class="faicon-vk" href="#"><i class="fab fa-vk"></i></a></li>
-            </ul>
+            <p>We share regular updates and research news across our projects.</p>
         </div>
 
         <div class="one_third">
@@ -96,28 +130,20 @@
         </div>
 
         <div class="one_third">
-            <div class="logo-grid">
-                <img src="../../images/collaborators/IPB_University.svg" alt="IPB University" style="height: 90px;">
-                <img src="../../images/collaborators/SinarMas.png" alt="Sinar Mas" style="height: 90px;">
-                <img src="../../images/collaborators/University_Cambridge.png" alt="University of Cambridge" style="height: 90px;">
-                <img src="../../images/collaborators/University_Nottingham.svg" alt="University of Nottingham" style="height: 90px;">
-            </div>
+            <img src="../../images/collaborators/IPB_University.svg" style="height: 75px; margin-right: 20px;">
+            <img src="../../images/collaborators/SinarMas.png" style="height: 75px; margin-right: 20px;">
+            <img src="../../images/collaborators/University_Cambridge.png" style="height: 75px; margin-right: 20px;">
+            <img src="../../images/collaborators/University_Nottingham.svg" style="height: 75px;">
         </div>
-
     </footer>
 </div>
 
 <div class="wrapper row5">
-    <div id="copyright">
+    <div id="copyright" class="hoc clear">
         <p>&copy; 2025 Oil Palm Biodiversity. All Rights Reserved.</p>
     </div>
 </div>
 
-<a id="backtotop" href="#top"><i class="fas fa-chevron-up"></i></a>
-
-<script src="../../layout/scripts/jquery.min.js"></script>
-<script src="../../layout/scripts/jquery.backtotop.js"></script>
-<script src="../../layout/scripts/jquery.mobilemenu.js"></script>
-
 </body>
 </html>
+
