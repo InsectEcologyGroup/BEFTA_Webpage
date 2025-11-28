@@ -1,82 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Julia | SOWPA</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title><!-- CHANGE THIS: Page title, e.g. "Michael Pashkevich | SOWPA" --></title>
 
-    <link rel="stylesheet" href="../../layout/styles/layout.css">
-    <link rel="stylesheet" href="../../layout/styles/team.css">
-    <link rel="stylesheet" href="../../layout/styles/font-awesome.min.css">
+  <!-- Load main site styles so the green theme appears -->
+  <link rel="stylesheet" href="../../layout/styles/layout.css">
+  <link rel="stylesheet" href="../../layout/styles/team.css">
+  <link rel="stylesheet" href="../../layout/styles/font-awesome.min.css">
 
-    <style>
-        .profile-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 40px;
-            align-items: flex-start;
-            margin: 40px auto;
-            max-width: 1000px;
-        }
-        .profile-photo {
-            width: 280px;
-            border-radius: 10px;
-            box-shadow: 0px 2px 8px rgba(0,0,0,0.2);
-        }
-        .profile-text {
-            flex: 1;
-            min-width: 260px;
-        }
-        @media (max-width: 700px) {
-            .profile-container {
-                flex-direction: column;
-                text-align: center;
-            }
-            .profile-photo {
-                margin: 0 auto;
-            }
-        }
-    </style>
+  <style>
+    .profile-wrapper {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 20px;
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+      align-items: flex-start;
+    }
+    .profile-photo {
+      flex: 0 0 320px;
+      max-width: 320px;
+    }
+    .profile-photo img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    }
+    .profile-content {
+      flex: 1;
+      min-width: 280px;
+      background: #ffffff;
+      padding: 25px 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+    }
+    .profile-content h2 {
+      margin-top: 0;
+      font-size: 1.6rem;
+    }
+    .profile-header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .profile-header h1 {
+      font-size: 2.4rem;
+      margin: 0;
+    }
+    .profile-header p {
+      margin-top: 5px;
+      color: #555;
+    }
+    .back-link {
+      margin-top: 20px;
+      display: inline-block;
+      background: #006633;
+      color: #fff;
+      padding: 8px 16px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+    .back-link:hover {
+      background: #004c25;
+    }
+
+    @media (max-width: 760px) {
+      .profile-wrapper {
+        flex-direction: column;
+        align-items: center;
+      }
+      .profile-content {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 
-<body>
+<body id="top">
 
-<header>
-    <h1>Julia Drewer – Principal Research Scientist</h1>
-</header>
+<!-- Green banner + logo + nav (same as other pages, just with adjusted paths) -->
+<div class="bgded overlay padtop" style="background-image:url('../../images/BEFTA_Webpage_Pic.jpg');">
+  <header id="header" class="hoc clear">
+    <div id="logo" class="fl_left">
+      <a href="../../index.html">
+        <img src="../../images/Logo.png" alt="BEFTA Logo" width="60">
+      </a>
+    </div>
+    <nav id="mainav" class="fl_right"> 
+      <ul class="clear">
+        <li><a href="../../index.html">Home</a></li>
+        <li class="active"><a class="drop" href="#">Pages</a>
+          <ul>
+            <li><a href="../full-width.html">Our Story</a></li>
+            <li><a href="../research.html">Research Overview</a></li>
+            <li><a href="../team.html">Team</a></li>
+            <li><a href="../collaborators.html">Collaborators</a></li>
+            <li><a href="../news.html">News</a></li>
+            <li><a href="../publications.html">Publications</a></li>
+            <li><a href="../resources.html">Resources</a></li>
+            <li><a href="../gallery.html">Gallery</a></li>
+          </ul>
+        </li>
+        <li><a href="../contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+</div>
 
-<main class="content">
+<!-- Main content -->
+<div class="wrapper row3">
+  <main class="hoc container clear">
 
-    <div class="profile-container">
+    <div class="profile-header">
+      <h1><!-- CHANGE THIS: e.g. "Michael Pashkevich Jr.– Researcher" --></h1>
+      <p><!-- CHANGE THIS: short role line, e.g. "Project Lead – SOWPA" --></p>
+    </div>
 
-        <img src="../../images/team/Julia_Drewer.jpg" alt="Julia Drewer">
+    <div class="profile-wrapper">
 
-        <div class="profile-text">
-            <h2>About Julia</h2>
-            <p>
-                Julia is Head of Atmosphere-Biosphere Interactions at the UK Centre for Ecology & Hydrology and a Principal Research Scientist interested in the trace gas fluxes from various ecosystems, including natural and agricultural systems. Current research focuses on greenhouse gas fluxes from oil palm plantations in Southeast Asia and West Africa focusing on sustainability issues and restoration options.
-                https://eur03.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.ceh.ac.uk%2Fstaff%2Fjulia-drewer&data=05%7C02%7Chss39%40universityofcambridgecloud.onmicrosoft.com%7Ce62fcd6a2b39447141bb08ddf0698db4%7C49a50445bdfa4b79ade3547b4f3986e9%7C1%7C0%7C638931058376176191%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=MA0ktY7uYuLsZ8fWipVjogQy%2BhnOG21rd6KUiOjf%2FBs%3D&reserved=0
-            </p>
+      <!-- LEFT: photo -->
+      <div class="profile-photo">
+        <!-- CHANGE THIS: image + alt -->
+        <img src="../../images/team/Michael_Pashkevich.jpg" alt="Michael Pashkevich">
+      </div>
 
-            <p><a href="../SOWPA_team.html">← Back to SOWPA Team</a></p>
+      <!-- RIGHT: bio -->
+      <div class="profile-content">
+        <h2><!-- CHANGE THIS: usually "About [Name]" --></h2>
+        <p>
+          <!-- CHANGE THIS: bio text -->
+          Lorem ipsum placeholder text about this person. Replace with real biography.
+        </p>
 
-        </div>
+        <!-- CHANGE BACK-LINK TARGET IF NEEDED -->
+        <a class="back-link" href="../team.html">← Back to Team</a>
+        <!-- Or for SOWPA-only profiles you can use:
+        <a class="back-link" href="../team.html#sowpa">← Back to SOWPA team</a>
+        -->
+      </div>
 
     </div>
 
-</main>
+  </main>
+</div>
 
-<!-- FOOTER -->
+<!-- Footer -->
 <div class="wrapper row4">
-    <footer id="footer" class="hoc clear"> 
-        <!-- footer unchanged -->
-    </footer>
+  <footer id="footer" class="hoc clear">
+    <div class="one_third first">
+      <h6 class="heading">Keep up to date with our team</h6>
+      <p>We share regular stories and updates on our research.</p>
+    </div>
+    <div class="one_third">
+      <h6 class="heading">ABOUT</h6>
+      <ul class="nospace linklist">
+        <li><a href="../full-width.html">Our Story</a></li>
+        <li><a href="../research.html">Vision & Strategy</a></li>
+        <li><a href="../collaborators.html">Collaborators</a></li>
+        <li><a href="../news.html">News</a></li>
+      </ul>
+    </div>
+    <div class="one_third">
+      <img src="../../images/collaborators/IPB_University.svg" style="height:70px; margin-right:15px;" alt="IPB University">
+      <img src="../../images/collaborators/SinarMas.png" style="height:70px; margin-right:15px;" alt="Sinar Mas">
+      <img src="../../images/collaborators/University_Cambridge.png" style="height:70px; margin-right:15px;" alt="University of Cambridge">
+      <img src="../../images/collaborators/University_Nottingham.svg" style="height:70px;" alt="University of Nottingham">
+    </div>
+  </footer>
 </div>
 
 <div class="wrapper row5">
-    <div id="copyright">
-        <p>&copy; 2025 Oil Palm Biodiversity. All Rights Reserved.</p>
-    </div>
+  <div id="copyright" class="hoc clear">
+    <p class="fl_left">&copy; 2025 Oil Palm Biodiversity. All Rights Reserved.</p>
+  </div>
 </div>
 
 <a id="backtotop" href="#top"><i class="fas fa-chevron-up"></i></a>
