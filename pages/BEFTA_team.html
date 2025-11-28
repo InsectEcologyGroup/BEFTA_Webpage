@@ -1,93 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BEFTA Team | BEFTA</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BEFTA Team | BEFTA</title>
 
-    <link rel="stylesheet" href="../layout/styles/layout.css">
+  <link rel="stylesheet" href="../layout/styles/layout.css">
 
-    <style>
-        .team-container {
-            max-width: 1100px;
-            margin: 50px auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 30px;
-            padding: 20px;
-        }
-        .team-card {
-            background: #fff;
-            border-radius: 10px;
-            box-shadow: 0 3px 12px rgba(0,0,0,0.15);
-            text-align: center;
-            padding: 20px;
-            transition: 0.3s ease;
-        }
-        .team-card:hover {
-            transform: translateY(-5px);
-        }
-        .team-card img {
-            width: 100%;
-            max-width: 180px;
-            border-radius: 10px;
-            margin-bottom: 10px;
-        }
-        header h1 {
-            text-align: center;
-            margin-top: 40px;
-        }
-    </style>
+  <style>
+    .team-container {
+      max-width: 1100px;
+      margin: 50px auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 35px;
+      padding: 20px;
+    }
+    .team-card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.15);
+      text-align: center;
+      padding: 20px;
+      transition: 0.3s ease;
+    }
+    .team-card:hover { transform: translateY(-5px); }
+    .team-card img {
+      width: 100%;
+      max-width: 180px;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+    h1.center { text-align: center; margin-top: 40px; }
+  </style>
 </head>
 
-<body>
+<body id="top">
 
-<header>
-    <h1>BEFTA Research Team</h1>
-</header>
+<!-- ✔ Green banner + logo + nav (standard site layout) -->
+<div class="bgded overlay padtop" style="background-image:url('../images/BEFTA_Webpage_Pic.jpg');">
+  <header id="header" class="hoc clear">
+    <div id="logo" class="fl_left">
+      <a href="../index.html">
+        <img src="../images/Logo.png" alt="BEFTA Logo" width="60">
+      </a>
+    </div>
 
-<main>
+    <nav id="mainav" class="fl_right"> 
+      <ul class="clear">
+        <li><a href="../index.html">Home</a></li>
+        <li class="active"><a class="drop" href="#">Pages</a>
+          <ul>
+            <li><a href="full-width.html">Our Story</a></li>
+            <li><a href="research.html">Research Overview</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="collaborators.html">Collaborators</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="publications.html">Publications</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="wrapper row3">
+  <main class="hoc container clear">
+
+    <h1 class="center">BEFTA Research Team</h1>
+
     <div class="team-container">
 
-        <!-- Sarah Luke -->
-        <div class="team-card">
-            <a href="profiles/Sarah.html">
-                <img src="../images/team/Sarah_Luke.jpg" alt="Sarah Luke">
-                <h3>Sarah Luke</h3>
-                <p>Co-Project Lead</p>
-            </a>
-        </div>
+      <!-- Sarah Luke -->
+      <div class="team-card">
+        <a href="profiles/Sarah.html">
+          <img src="../images/team/Sarah_Luke.jpg" alt="Sarah Luke">
+          <h3>Sarah Luke</h3>
+          <p>Co–Project Lead</p>
+        </a>
+      </div>
 
-        <!-- Ed Turner -->
-        <div class="team-card">
-            <a href="profiles/ed.html">
-                <img src="../images/team/Ed_Turner.jpg" alt="Ed Turner">
-                <h3>Ed Turner</h3>
-                <p>Co-Project Lead</p>
-            </a>
-        </div>
+      <!-- Ed Turner -->
+      <div class="team-card">
+        <a href="profiles/ed.html">
+          <img src="../images/team/Ed_Turner.jpg" alt="Ed Turner">
+          <h3>Ed Turner</h3>
+          <p>Co–Project Lead</p>
+        </a>
+      </div>
 
-        <!-- Jean-Pierre -->
-        <div class="team-card">
-            <a href="profiles/Jean-Pierre.html">
-                <img src="../images/team/Jean-Pierre.jpg" alt="Jean-Pierre Caliman">
-                <h3>J.P. Caliman</h3>
-                <p>Co-Project Lead</p>
-            </a>
-        </div>
+      <!-- JP Caliman -->
+      <div class="team-card">
+        <a href="profiles/Jean-Pierre.html">
+          <img src="../images/team/Jean-Pierre.jpg" alt="Jean-Pierre Caliman">
+          <h3>J.P. Caliman</h3>
+          <p>Co–Project Lead</p>
+        </a>
+      </div>
 
-        <!-- Agung -->
-        <div class="team-card">
-            <a href="profiles/Agung.html">
-                <img src="../images/team/Agung_Aryawan.jpg" alt="Agung Aryawan">
-                <h3>Agung Aryawan</h3>
-                <p>Field Manager</p>
-            </a>
-        </div>
+      <!-- Agung -->
+      <div class="team-card">
+        <a href="profiles/Agung.html">
+          <img src="../images/team/Agung_Aryawan.jpg" alt="Agung Aryawan">
+          <h3>Agung Aryawan</h3>
+          <p>Field Manager</p>
+        </a>
+      </div>
 
     </div>
-</main>
+  </main>
+</div>
+
+<!-- FOOTER -->
+<div class="wrapper row4">
+  <footer id="footer" class="hoc clear">
+
+    <div class="one_third first">
+      <h6 class="heading">Keep up to date with our team</h6>
+      <p>We share regular stories and updates on our research.</p>
+    </div>
+
+    <div class="one_third">
+      <h6 class="heading">ABOUT</h6>
+      <ul class="nospace linklist">
+        <li><a href="full-width.html">Our Story</a></li>
+        <li><a href="research.html">Vision & Strategy</a></li>
+        <li><a href="collaborators.html">Collaborators</a></li>
+        <li><a href="news.html">News</a></li>
+      </ul>
+    </div>
+
+  </footer>
+</div>
+
+<div class="wrapper row5">
+  <div id="copyright">
+    <p>&copy; 2025 Oil Palm Biodiversity. All Rights Reserved.</p>
+  </div>
+</div>
+
+<a id="backtotop" href="#top"><i class="fas fa-chevron-up"></i></a>
 
 </body>
 </html>
-
