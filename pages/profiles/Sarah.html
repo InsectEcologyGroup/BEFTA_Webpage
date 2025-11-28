@@ -1,127 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>University of Nottingham | BEFTA</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dr Sarah Luke | BEFTA</title>
+    <link rel="stylesheet" href="../../layout/styles.css" />
 
-    <!-- Correct relative path for CSS -->
-    <link rel="stylesheet" href="../../layout/styles.css">
-
-    <!-- Additional small CSS for profile layout -->
     <style>
-        .profile-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 40px; 
-            align-items: flex-start;
-            margin: 40px auto;
-            max-width: 1000px;
+        .profile-header { text-align: center; padding: 40px 20px 10px; }
+        .profile-header h1 { font-size: 2.4rem; margin-bottom: 10px; }
+        .profile-wrapper {
+            max-width: 1100px; margin: 40px auto; padding: 0 20px;
+            display: flex; gap: 40px; flex-wrap: wrap; align-items: flex-start;
         }
-
-        .profile-photo {
-            width: 280px;
-            border-radius: 10px;
-            box-shadow: 0px 2px 8px rgba(0,0,0,0.2);
+        .profile-photo { flex: 0 0 320px; max-width: 320px; }
+        .profile-photo img {
+            width: 100%; border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.15);
         }
-
-        .profile-text {
-            flex: 1;
-            min-width: 260px;
+        .profile-content {
+            flex: 1; min-width: 280px; background: #fff;
+            padding: 25px 30px; border-radius: 12px;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.12);
         }
-
-        .profile-text h1 {
-            margin-top: 0;
+        .profile-content h2 { margin-top: 0; font-size: 1.6rem; }
+        .back-link {
+            margin-top: 20px; display: inline-block;
+            background: #006699; color: #fff;
+            padding: 10px 18px; border-radius: 6px;
+            text-decoration: none;
         }
-
-        @media (max-width: 700px) {
-            .profile-container {
-                flex-direction: column;
-                text-align: center;
-            }
-            .profile-photo {
-                margin: 0 auto;
-            }
+        .back-link:hover { background: #004c70; }
+        @media (max-width: 760px) {
+            .profile-wrapper { flex-direction: column; align-items: center; text-align: center; }
+            .profile-content { text-align: left; }
         }
     </style>
 </head>
-
 <body>
 
-<header>
-    <h1>Sarah H. Luke – Professor</h1>
-</header>
-
-<main class="content">
-
-    <div class="profile-container">
-        
-        <!-- LEFT: Profile Photo -->
-        <img class="profile-photo" src="../../images/team/Sarah.jpg" alt="Sarah's Profile Photo">
-
-        <!-- RIGHT: Profile Text -->
-        <div class="profile-text">
-            <h2>About Sarah</h2>
-            <p>
-                Dr Sarah Luke has been part of the BEFTA and RERTA project since ...
-                (Add full bio here)
-            </p>
-
-            <p><a href="../team.html">← Back to Team</a></p>
-        </div>
-    </div>
-
-</main>
-
-<!-- FOOTER (unchanged but with corrected paths) -->
-<div class="wrapper row4">
-    <footer id="footer" class="hoc clear"> 
-
-        <div class="one_third first">
-            <h6 class="heading">Keep up to date with our team</h6>
-            <p>We are constantly uploading stories and news about the research completed by our amazing team. Follow us for more stories and the latest news.</p>
-            <ul class="faico clear">
-                <li><a class="faicon-facebook" href="#"><i class="fab fa-facebook"></i></a></li>
-                <li><a class="faicon-google-plus" href="#"><i class="fab fa-google-plus-g"></i></a></li> 
-                <li><a class="faicon-linkedin" href="#"><i class="fab fa-linkedin"></i></a></li>
-                <li><a class="faicon-twitter" href="#"><i class="fab fa-twitter"></i></a></li>
-                <li><a class="faicon-vk" href="#"><i class="fab fa-vk"></i></a></li>
-            </ul>
-        </div>
-
-        <div class="one_third">
-            <h6 class="heading">ABOUT</h6>
-            <ul class="nospace linklist">
-                <li><a href="../full-width.html">Our Story</a></li>
-                <li><a href="../research.html">Vision & Strategy</a></li>
-                <li><a href="../collaborators.html">Collaborators</a></li>
-                <li><a href="../news.html">News</a></li>
-            </ul>
-        </div>
-
-        <div class="one_third">
-            <div class="logo-grid">
-              <img src="../../images/collaborators/IPB_University.svg" alt="IPB University" style="height: 60px;">
-              <img src="../../images/collaborators/SinarMas.png" alt="Sinar Mas" style="height: 60px;">
-              <img src="../../images/collaborators/University_Cambridge.png" alt="University of Cambridge" style="height: 60px;">
-              <img src="../../images/collaborators/University_Nottingham.svg" alt="University of Nottingham" style="height: 60px;">
-            </div>
-        </div>
-
-    </footer>
+<div class="profile-header">
+    <h1>Dr Sarah Luke – Ecologist</h1>
 </div>
 
-<div class="wrapper row5">
-    <div id="copyright">
-        <p>&copy; 2025 Oil Palm Biodiversity. All Rights Reserved.</p>
+<div class="profile-wrapper">
+    <div class="profile-photo">
+        <img src="../../images/team/Sarah_Luke.jpg" alt="Sarah Luke">
+    </div>
+    <div class="profile-content">
+        <h2>About Sarah</h2>
+        <p>
+            Sarah is an ecologist specialising in biodiversity in tropical agricultural systems.
+            She leads work on understory vegetation, fauna, and ecosystem processes across the BEFTA
+            and RERTA projects, helping to identify management strategies that support wildlife and
+            production.
+        </p>
+        <a class="back-link" href="../team.html">← Back to Team</a>
     </div>
 </div>
-
-<a id="backtotop" href="#top"><i class="fas fa-chevron-up"></i></a>
-
-<script src="../../layout/scripts/jquery.min.js"></script>
-<script src="../../layout/scripts/jquery.backtotop.js"></script>
-<script src="../../layout/scripts/jquery.mobilemenu.js"></script>
 
 </body>
 </html>
+
