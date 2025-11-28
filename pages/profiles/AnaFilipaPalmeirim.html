@@ -1,59 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ana Filipa Palmeirim | SOWPA</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ben Freeman | SOWPA</title>
 
+  <!-- Load main site styles so the green theme appears -->
   <link rel="stylesheet" href="../../layout/styles/layout.css">
   <link rel="stylesheet" href="../../layout/styles/team.css">
   <link rel="stylesheet" href="../../layout/styles/font-awesome.min.css">
 
-  <style> /* SAME CSS AS BROGAN — omitted for readability */ </style>
+  <style>
+    .profile-wrapper {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 20px;
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+      align-items: flex-start;
+    }
+    .profile-photo {
+      flex: 0 0 320px;
+      max-width: 320px;
+    }
+    .profile-photo img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    }
+    .profile-content {
+      flex: 1;
+      min-width: 280px;
+      background: #ffffff;
+      padding: 25px 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+    }
+    .profile-content h2 {
+      margin-top: 0;
+      font-size: 1.6rem;
+    }
+    .profile-header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .profile-header h1 {
+      font-size: 2.4rem;
+      margin: 0;
+    }
+    .profile-header p {
+      margin-top: 5px;
+      color: #555;
+    }
+    .back-link {
+      margin-top: 20px;
+      display: inline-block;
+      background: #006633;
+      color: #fff;
+      padding: 8px 16px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+    .back-link:hover {
+      background: #004c25;
+    }
+
+    @media (max-width: 760px) {
+      .profile-wrapper {
+        flex-direction: column;
+        align-items: center;
+      }
+      .profile-content {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 
 <body id="top">
 
+<!-- Green banner + logo + nav (same as other pages, just with adjusted paths) -->
 <div class="bgded overlay padtop" style="background-image:url('../../images/BEFTA_Webpage_Pic.jpg');">
   <header id="header" class="hoc clear">
     <div id="logo" class="fl_left">
-      <a href="../../index.html"><img src="../../images/Logo.png" width="60"></a>
+      <a href="../../index.html">
+        <img src="../../images/Logo.png" alt="BEFTA Logo" width="60">
+      </a>
     </div>
-    <nav id="mainav" class="fl_right">
-      <ul class="clear"><li><a href="../../index.html">Home</a></li></ul>
+    <nav id="mainav" class="fl_right"> 
+      <ul class="clear">
+        <li><a href="../../index.html">Home</a></li>
+        <li class="active"><a class="drop" href="#">Pages</a>
+          <ul>
+            <li><a href="../full-width.html">Our Story</a></li>
+            <li><a href="../research.html">Research Overview</a></li>
+            <li><a href="../team.html">Team</a></li>
+            <li><a href="../collaborators.html">Collaborators</a></li>
+            <li><a href="../news.html">News</a></li>
+            <li><a href="../publications.html">Publications</a></li>
+            <li><a href="../resources.html">Resources</a></li>
+            <li><a href="../gallery.html">Gallery</a></li>
+          </ul>
+        </li>
+        <li><a href="../contact.html">Contact Us</a></li>
+      </ul>
     </nav>
   </header>
 </div>
 
+<!-- Main content -->
 <div class="wrapper row3">
   <main class="hoc container clear">
 
     <div class="profile-header">
       <h1>Ana Filipa Palmeirim</h1>
-      <p>Professor — SOWPA Project</p>
+      <p>Lecturer — SOWPA Project</p>
     </div>
 
     <div class="profile-wrapper">
+
+      <!-- LEFT: photo -->
       <div class="profile-photo">
-        <img src="../../images/team/Ana_Filipa_Palmeirim.jpg" alt="Ana Palmeirim">
+        <!-- CHANGE THIS: image + alt -->
+        <img src="../../images/team/Ana_Filipa_Palmeirim.jpg" alt="Ana Filipa Palmeirim">
       </div>
 
+      <!-- RIGHT: bio -->
       <div class="profile-content">
         <h2>About Ana</h2>
-
         <p>
-          Ana Filipa Palmeirim is a Professor at the Université Libre de Brussels. She studies complex biodiversity responses to human disturbance across the tropics, with a major focus on mammals, amphibians, and reptiles.
+          Benedictus (Ben) Freeman is a Liberian conservationist dedicated to protecting his country's rich biodiversity. As a lecturer at the University of Liberia and Coordinator for U.S. Forest Service International Programs and Trade in Liberia, he brings nearly a decade of experience to his work in conservation, research, and capacity building. Ben's cutting-edge research uses ecological niche modeling, GIS, and remote sensing to predict how climate and land-use changes will affect species distribution. His goal is to provide crucial data to inform effective conservation strategies. His research interests span conservation biology, forestry, ornithology, and restoration ecology, with a focus on using biodiversity informatics to drive decision-making. Passionate about both nature and mentorship, Ben is committed to training young conservationists in Liberia. In his free time, you can find him in the garden or out birdwatching. He holds a B.S. from the University of Liberia, an M.S. from the University of Jos, Nigeria, and a Ph.D. from the University of Kansas.
+
         </p>
         <p>
-          Her research investigates the ecological impacts of land-use change, habitat loss, and fragmentation, and more recently the socio-ecological value of forest fragments, including health-related ecosystem services.
+          Ben is a collaborating researcher in the SOWPA project.
         </p>
 
-        <a class="back-link" href="../team.html#SOWPA">← Back to SOWPA Team</a>
+        <!-- <a class="back-link" href="../team.html#SOWPA">← Back to SOWPA Team</a> -->
       </div>
+    </div>
+    
+        <!-- CHANGE BACK-LINK TARGET IF NEEDED -->
+        <a class="back-link" href="javascript:history.back()">← Back</a>
+        <!-- Or for SOWPA-only profiles you can use:
+        <a class="back-link" href="../team.html#sowpa">← Back to SOWPA team</a>
+        -->
+      </div>
+
     </div>
 
   </main>
 </div>
+
+<!-- Footer -->
+<div class="wrapper row4">
+  <footer id="footer" class="hoc clear">
+    <div class="one_third first">
+      <h6 class="heading">Keep up to date with our team</h6>
+      <p>We share regular stories and updates on our research.</p>
+    </div>
+    <div class="one_third">
+      <h6 class="heading">ABOUT</h6>
+      <ul class="nospace linklist">
+        <li><a href="../full-width.html">Our Story</a></li>
+        <li><a href="../research.html">Vision & Strategy</a></li>
+        <li><a href="../collaborators.html">Collaborators</a></li>
+        <li><a href="../news.html">News</a></li>
+      </ul>
+    </div>
+    <div class="one_third">
+      <img src="../../images/collaborators/IPB_University.svg" style="height:70px; margin-right:15px;" alt="IPB University">
+      <img src="../../images/collaborators/SinarMas.png" style="height:70px; margin-right:15px;" alt="Sinar Mas">
+      <img src="../../images/collaborators/University_Cambridge.png" style="height:70px; margin-right:15px;" alt="University of Cambridge">
+      <img src="../../images/collaborators/University_Nottingham.svg" style="height:70px;" alt="University of Nottingham">
+    </div>
+  </footer>
+</div>
+
+<div class="wrapper row5">
+  <div id="copyright" class="hoc clear">
+    <p class="fl_left">&copy; 2025 Oil Palm Biodiversity. All Rights Reserved.</p>
+  </div>
+</div>
+
+<a id="backtotop" href="#top"><i class="fas fa-chevron-up"></i></a>
+
+<script src="../../layout/scripts/jquery.min.js"></script>
+<script src="../../layout/scripts/jquery.backtotop.js"></script>
+<script src="../../layout/scripts/jquery.mobilemenu.js"></script>
 
 </body>
 </html>
