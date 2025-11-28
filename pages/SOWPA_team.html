@@ -1,125 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SOWPA Team | BEFTA</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SOWPA Team | BEFTA</title>
 
-    <link rel="stylesheet" href="../../layout/styles/layout.css">
+  <link rel="stylesheet" href="../../layout/styles/layout.css">
 
-    <style>
-        .team-container {
-            max-width: 1100px;
-            margin: 50px auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 30px;
-            padding: 20px;
-        }
-        .team-card {
-            background: #fff;
-            border-radius: 10px;
-            box-shadow: 0 3px 12px rgba(0,0,0,0.15);
-            text-align: center;
-            padding: 20px;
-            transition: 0.3s ease;
-        }
-        .team-card:hover {
-            transform: translateY(-5px);
-        }
-        .team-card img {
-            width: 100%;
-            max-width: 180px;
-            border-radius: 10px;
-            margin-bottom: 10px;
-        }
-        header h1 {
-            text-align: center;
-            margin-top: 40px;
-        }
-        .team-card h3 {
-            margin-bottom: 4px;
-        }
-        .team-card p {
-            margin: 0;
-        }
-    </style>
+  <style>
+    .team-container {
+      max-width: 1100px;
+      margin: 50px auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 35px;
+      padding: 20px;
+    }
+    .team-card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.15);
+      text-align: center;
+      padding: 20px;
+      transition: 0.3s ease;
+    }
+    .team-card:hover {
+      transform: translateY(-5px);
+    }
+    .team-card img {
+      width: 100%;
+      max-width: 180px;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+    h1.center {
+      text-align: center;
+      margin-top: 40px;
+    }
+  </style>
 </head>
 
-<body>
+<body id="top">
 
-<header>
-    <h1>SOWPA Research Team</h1>
-</header>
+<!-- Green Header Banner -->
+<div class="bgded overlay padtop" style="background-image:url('../../images/BEFTA_Webpage_Pic.jpg');">
+  <header id="header" class="hoc clear">
+    <div id="logo" class="fl_left">
+      <a href="../../index.html">
+        <img src="../../images/Logo.png" alt="BEFTA Logo" width="60">
+      </a>
+    </div>
 
-<main>
+    <nav id="mainav" class="fl_right"> 
+      <ul class="clear">
+        <li><a href="../../index.html">Home</a></li>
+        <li class="active"><a class="drop" href="#">Pages</a>
+          <ul>
+            <li><a href="../full-width.html">Our Story</a></li>
+            <li><a href="../research.html">Research Overview</a></li>
+            <li><a href="../team.html">Team</a></li>
+            <li><a href="../collaborators.html">Collaborators</a></li>
+            <li><a href="../news.html">News</a></li>
+            <li><a href="../publications.html">Publications</a></li>
+            <li><a href="../resources.html">Resources</a></li>
+            <li><a href="../gallery.html">Gallery</a></li>
+          </ul>
+        </li>
+        <li><a href="../contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="wrapper row3">
+  <main class="hoc container clear">
+
+    <h1 class="center">SOWPA Research Team</h1>
+
     <div class="team-container">
-        <!-- Michael -->
-        <div class="team-card">
-            <a href="profiles/Michael.html">
-                <img src="../images/team/Michael.jpg" alt="Michael">
-                <h3>Michael</h3>
-                <p>Project Lead</p>
-            </a>
-        </div>
 
-        <!-- Julia -->
-        <div class="team-card">
-            <a href="profiles/JuliaDrewer.html">
-                <img src="../images/team/Becky.jpg" alt="Becky">
-                <h3>Julia Drewer</h3>
-                <p>Researcher</p>
-            </a>
-        </div>
+      <!-- Michael -->
+      <div class="team-card">
+        <a href="../profiles/Michael.html">
+          <img src="../../images/team/Michael_Pashkevich.jpg" alt="Michael">
+          <h3>Michael Pashkevich</h3>
+          <p>Project Lead</p>
+        </a>
+      </div>
 
-        <!-- Brogan -->
-        <div class="team-card">
-            <a href="profiles/BroganLPett.html">
-                <img src="../images/team/Brogan.jpg" alt="Brogan">
-                <h3>Brogan L. Pett</h3>
-                <p>Postdoctoral Researcher</p>
-            </a>
-        </div>
+      <!-- Julia -->
+      <div class="team-card">
+        <a href="../profiles/Julia.html">
+          <img src="../../images/team/Julia_Drewer.jpg" alt="Julia">
+          <h3>Julia Drewer</h3>
+          <p>Researcher</p>
+        </a>
+      </div>
 
-        <!-- Cicely Marshall -->
-        <div class="team-card">
-            <a href="profiles/CicelyMarshall.html">
-                <img src="../images/team/Cicely.jpg" alt="Cicely">
-                <h3>Cicely</h3>
-                <p>Researcher</p>
-            </a>
-        </div>
+      <!-- Brogan -->
+      <div class="team-card">
+        <a href="../profiles/Brogan.html">
+          <img src="../../images/team/Brogan_L_Pett.jpg" alt="Brogan">
+          <h3>Brogan L. Pett</h3>
+          <p>Postdoctoral Researcher</p>
+        </a>
+      </div>
 
+      <!-- Cicely -->
+      <div class="team-card">
+        <a href="../profiles/Cicely.html">
+          <img src="../../images/team/Cicely_Marshall.jpg" alt="Cicely">
+          <h3>Cicely Marshall</h3>
+          <p>Researcher</p>
+        </a>
+      </div>
 
-        <!-- Ana -->
-        <div class="team-card">
-            <a href="profiles/AnaFilipaPalmeirim.html">
-                <img src="../images/team/Ana.jpg" alt="Ana">
-                <h3>Ana</h3>
-                <p>Professor</p>
-            </a>
-        </div>
+      <!-- Ana -->
+      <div class="team-card">
+        <a href="../profiles/Ana.html">
+          <img src="../../images/team/Ana_Palmeirim.jpg" alt="Ana">
+          <h3>Ana Filipa Palmeirim</h3>
+          <p>Professor</p>
+        </a>
+      </div>
 
-        <!-- Ben Freeman -->
-        <div class="team-card">
-            <a href="profiles/BenFreeman.html">
-                <img src="../images/team/BenFreeman.jpg" alt="Ben Freeman">
-                <h3>Ben Freeman</h3>
-                <p>Visiting Researcher</p>
-            </a>
-        </div>
+      <!-- Ben -->
+      <div class="team-card">
+        <a href="../profiles/BenFreeman.html">
+          <img src="../../images/team/Ben_Freeman.jpg" alt="Ben Freeman">
+          <h3>Ben Freeman</h3>
+          <p>Visiting Researcher</p>
+        </a>
+      </div>
 
-        <!-- Jonny Timperley -->
-        <div class="team-card">
-            <a href="profiles/JonnyTimperley.html">
-                <img src="../images/team/Jonny.jpg" alt="Jonny">
-                <h3>Jonny Timperley</h3>
-                <p>PhD Student</p>
-            </a>
-        </div>
+      <!-- Jonny -->
+      <div class="team-card">
+        <a href="../profiles/Jonny.html">
+          <img src="../../images/team/Jonny_Timperley.jpg" alt="Jonny">
+          <h3>Jonny Timperley</h3>
+          <p>PhD Researcher</p>
+        </a>
+      </div>
 
     </div>
-</main>
+  </main>
+</div>
 
 </body>
 </html>
+
