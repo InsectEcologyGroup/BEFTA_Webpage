@@ -13,6 +13,25 @@
     gap: 1rem;
     margin: 2rem 0;
   }
+
+  /* Unified appearance for all Meet the Team buttons */
+.team-btn {
+    display: inline-block;
+    background-color: #2c5f2d;     /* choose your theme color */
+    color: white;
+    font-weight: bold;
+    padding: 12px 24px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    margin: 30px 0 40px 0; /* TOP & BOTTOM spacing */
+}
+
+/* Hover effect */
+.team-btn:hover {
+    background-color: #234a22;
+}
   
   .tab-btn {
     padding: 10px 20px;
