@@ -7,14 +7,9 @@
   <link rel="stylesheet" href="../layout/styles/contact.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
 <body id="top">
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
 <div class="bgded overlay padtop" style="background-image:url('images/BEFTA_Webpage_Pic.jpg');"> 
-  <!-- ################################################################################################ -->
-  <!-- ################################################################################################ -->
-  <!-- ################################################################################################ -->
 
   <!-- Header -->
   <header id="header" class="hoc clear">
@@ -50,7 +45,18 @@
       <p class="center">Use the form below to get in touch with the relevant team member based on your inquiry.</p>
 
       <div class="contact-form-box">
-        <form action="#" method="post">
+        
+        <!-- CONTACT FORM -->
+        <form id="contactForm" method="POST">
+
+          <!-- Success redirect URL (change if needed) -->
+          <input type="hidden" name="_next" value="https://your-website-url.com/success.html">
+
+          <!-- Disable FormSubmit captcha if needed -->
+          <input type="hidden" name="_captcha" value="false">
+
+          <!-- Honeypot Anti-Spam Field (hidden from humans) -->
+          <input type="text" name="_honey" style="display:none">
 
           <!-- Project Dropdown -->
           <label for="project">Select Project:</label>
@@ -78,64 +84,76 @@
           <!-- Submit -->
           <button type="submit">Send Message</button>
         </form>
+
       </div>
     </main>
   </div>
 
+  <!-- Footer -->
   <div class="wrapper row4">
     <footer id="footer" class="hoc clear"> 
-      <!-- ################################################################################################ -->
       <div class="one_third first">
         <h6 class="heading">Keep up to date with our team</h6>
-        <p> We are constantly uploading stories and news about the research completed by our amazing team. Follow us for more stories and the latest news [<a href="#">&hellip;</a>]</p>
+        <p>We are constantly uploading stories and news about the research completed by our amazing team.</p>
         <ul class="faico clear">
           <li><a class="faicon-linkedin" href="#"><i class="fab fa-linkedin"></i></a></li>
           <li><a class="faicon-twitter" href="#"><i class="fab fa-twitter"></i></a></li>
         </ul>
       </div>
+
       <div class="one_third">
         <h6 class="heading">ABOUT</h6>
         <ul class="nospace linklist">
-        <li><a href="full-width.html">Our Story</a></li>
-        <li><a href="research.html">Vision & Strategy</a></li>
-        <li><a href="collaborators.html">Collaborators</a></li>
-        <li><a href="news.html">News</a></li>
+          <li><a href="full-width.html">Our Story</a></li>
+          <li><a href="research.html">Vision & Strategy</a></li>
+          <li><a href="collaborators.html">Collaborators</a></li>
+          <li><a href="news.html">News</a></li>
         </ul>
       </div>
+
       <div class="logo-grid">
-        <div class="logo-item">
-          <img src="../images/collaborators/IPB_University.svg" alt="IPB University">
-        </div>
-        <div class="logo-item">
-          <img src="../images/collaborators/SinarMas.png" alt="Sinar Mas">
-        </div>
-        <div class="logo-item">
-          <img src="../images/collaborators/University_Cambridge.png" alt="University of Cambridge">
-        </div>
-        <div class="logo-item">
-          <img src="../images/collaborators/University_Nottingham.svg" alt="University of Nottingham">
-        </div>
+        <div class="logo-item"><img src="../images/collaborators/IPB_University.svg" alt="IPB University"></div>
+        <div class="logo-item"><img src="../images/collaborators/SinarMas.png" alt="Sinar Mas"></div>
+        <div class="logo-item"><img src="../images/collaborators/University_Cambridge.png" alt="University of Cambridge"></div>
+        <div class="logo-item"><img src="../images/collaborators/University_Nottingham.svg" alt="University of Nottingham"></div>
       </div>
-      <!-- ################################################################################################ -->
     </footer>
   </div>
-  <!-- ################################################################################################ -->
-  <!-- ################################################################################################ -->
-  <!-- ################################################################################################ -->
+
+  <!-- Copyright -->
   <div class="wrapper row5">
-    <div id="copyright" class="hoc clear"> 
-      <!-- ################################################################################################ -->
-      <p class="fl_left"> &copy; 2025 Oil Palm Biodiversity. All Rights Reserved - <a href="#"></a></p>
-      <!-- ################################################################################################ -->
+    <div id="copyright" class="hoc clear">
+      <p class="fl_left">&copy; 2025 Oil Palm Biodiversity. All Rights Reserved</p>
     </div>
   </div>
-  <!-- ################################################################################################ -->
-  <!-- ################################################################################################ -->
-  <!-- ################################################################################################ -->
+
   <a id="backtotop" href="#top"><i class="fas fa-chevron-up"></i></a>
-  <!-- JAVASCRIPTS -->
+
+  <!-- Scripts -->
   <script src="layout/scripts/jquery.min.js"></script>
   <script src="layout/scripts/jquery.backtotop.js"></script>
   <script src="layout/scripts/jquery.mobilemenu.js"></script>
-  </body>
-  </html>
+
+  <!-- Dynamic Routing Script -->
+  <script>
+  document.getElementById("contactForm").addEventListener("submit", function(e) {
+    
+    const project = document.getElementById("project").value;
+
+    // Map project → email
+    const emailMap = {
+      "general": "generalteam@example.com",
+      "befta": "befta@example.com",
+      "rerta": "rerta@example.com",
+      "smallholder": "smallholder@example.com",
+      "malaysia": "malaysiateam@example.com"
+    };
+
+    // Set the FormSubmit endpoint dynamically
+    this.action = "https://formsubmit.co/" + emailMap[project];
+  });
+  </script>
+
+</div>
+</body>
+</html>
