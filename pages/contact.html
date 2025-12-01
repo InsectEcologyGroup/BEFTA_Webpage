@@ -45,17 +45,17 @@
       <p class="center">Use the form below to get in touch with the relevant team member based on your inquiry.</p>
 
       <div class="contact-form-box">
-        
+
         <!-- CONTACT FORM -->
         <form id="contactForm" method="POST">
 
-          <!-- Success redirect URL (change if needed) -->
-          <input type="hidden" name="_next" value="https://your-website-url.com/success.html">
+          <!-- Redirect URL (change to your real domain) -->
+          <input type="hidden" name="_next" value="https://YOUR-DOMAIN/success.html">
 
-          <!-- Disable FormSubmit captcha if needed -->
+          <!-- Disable FormSubmit CAPTCHA -->
           <input type="hidden" name="_captcha" value="false">
 
-          <!-- Honeypot Anti-Spam Field (hidden from humans) -->
+          <!-- Honeypot spam trap -->
           <input type="text" name="_honey" style="display:none">
 
           <!-- Project Dropdown -->
@@ -65,8 +65,8 @@
             <option value="general">General</option>
             <option value="befta">BEFTA</option>
             <option value="rerta">RERTA</option>
-            <option value="smallholder">Smallholder</option>
             <option value="sowpa">SOWPA</option>
+            <option value="smallholder">Smallholder</option>
             <option value="malaysia">Malaysia</option>
           </select>
 
@@ -138,12 +138,12 @@
   <!-- Dynamic Routing Script -->
   <script>
   document.getElementById("contactForm").addEventListener("submit", function(e) {
-    
+
     const project = document.getElementById("project").value;
 
     // Map project → email
     const emailMap = {
-      "general": "hss39@cam.ac.uk",
+      "general": "hssc3102"gmail.com",
       "befta": "ect23@cam.ac.uk",
       "rerta": "sarah.luke@nottingham.ac.uk",
       "sowpa": "michael.pashkevich@luke.fi",
@@ -151,7 +151,7 @@
       "malaysia": "ect23@cam.ac.uk"
     };
 
-    // Set the FormSubmit endpoint dynamically
+    // Apply correct FormSubmit endpoint
     this.action = "https://formsubmit.co/" + emailMap[project];
   });
   </script>
