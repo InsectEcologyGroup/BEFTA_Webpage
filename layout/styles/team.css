@@ -1,61 +1,109 @@
+/* -----------------------------------
+   LOGO
+----------------------------------- */
 #logo img {
     display: block;
-    padding-bottom: 10px; /* Adjust as needed */
-  }
-
-/* Team Grid Layout */
-.team-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 20px;
-    justify-content: space-around;
+    padding-bottom: 10px;
 }
 
-/* Individual Team Member Box */
-.team-member {
+/* -----------------------------------
+   TEAM GRID LAYOUT
+----------------------------------- */
+.team-grid, 
+.team-container { /* supports both BEFTA and RERTA pages */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    padding: 20px;
+    justify-content: center;
+}
+
+/* -----------------------------------
+   TEAM MEMBER CARD
+----------------------------------- */
+.team-member,
+.team-card { /* unify both designs */
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+
     background-color: #f5f5f5;
-    padding: 1rem;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    width: 100%;
-    max-width: 250px;
+    padding: 1.2rem;
+    border-radius: 14px;
+
+    box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-/* Team Member Images */
-.team-member img {
+.team-member:hover,
+.team-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.18);
+}
+
+/* -----------------------------------
+   PROFILE IMAGES (CIRCULAR FOR ALL)
+----------------------------------- */
+.team-member img,
+.team-card img,
+.team-member a img,
+.team-card a img {
     width: 150px;
     height: 150px;
-    border-radius: 50%;
+
+    aspect-ratio: 1 / 1;
     object-fit: cover;
+
+    border-radius: 50%;  /* makes ALL images circular */
+    margin-bottom: 10px;
 }
 
-/* Bio Section */
-.bio {
-    padding: 10px;
-    color: #333;
-    font-size: 14px;
+/* -----------------------------------
+   BIO / TEXT
+----------------------------------- */
+.team-member h3,
+.team-card h3 {
+    margin: 10px 0 5px 0;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #222;
 }
 
-/* Button */
+.team-member p,
+.team-card p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #444;
+}
+
+/* -----------------------------------
+   "Find out more" BUTTON
+----------------------------------- */
 .more-btn {
+    display: inline-block;
     margin-top: 10px;
-    padding: 5px 10px;
-    background-color: #228B22;
+    padding: 6px 12px;
+
+    background-color: #228B22; /* Green */
     color: white;
     text-decoration: none;
-    border-radius: 5px;
+
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: bold;
+
+    transition: background-color 0.2s ease;
 }
 
 .more-btn:hover {
     background-color: #145214;
 }
 
-/* Filter Tabs */
+/* -----------------------------------
+   FILTER TABS (If Used)
+----------------------------------- */
 .tab-buttons {
     display: flex;
     justify-content: center;
@@ -66,10 +114,13 @@
 .tab-buttons button {
     padding: 10px 15px;
     background-color: #228B22;
-    color: white;
+    color: #fff;
+
     border: none;
     cursor: pointer;
     border-radius: 5px;
+
+    transition: background-color 0.2s ease;
 }
 
 .tab-buttons button.active,
@@ -82,39 +133,37 @@
 }
 
 .tab-content.active {
-    display: grid;
+    display: block; /* supports both grid & block usage */
 }
 
-.tab-content {
-    display: none;
-  }
-  
-  .tab-content.active {
-    display: block;
-  }
-  
-  .bgded {
+/* -----------------------------------
+   BACKGROUND OVERRIDE (if required)
+----------------------------------- */
+.bgded {
     background-image: none !important;
-  }
+}
 
+/* -----------------------------------
+   PARTNER LOGO GRID
+----------------------------------- */
 .logo-grid {
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	gap: 40px 30px; /* vertical and horizontal spacing */
-	justify-items: center;
-	align-items: center;
-  }
-  
-  .logo-item {
-	width: 150px;
-	height: 100px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-  }
-  
-  .logo-item img {
-	max-width: 100%;
-	max-height: 100%;
-	object-fit: contain;
-  }
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 30px;
+    justify-items: center;
+    align-items: center;
+}
+
+.logo-item {
+    width: 150px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-item img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
